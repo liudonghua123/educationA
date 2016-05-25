@@ -1,3 +1,14 @@
+* {
+	font-family: "微软雅黑";
+}
+h4 {
+    font-size: 16px;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #777;
+    font-size: 18px;
+    font-weight: 300;
+}
 .list-group-item{
     border: 0px;
     border-bottom: 1px dashed #c5c5c5;
@@ -6,3 +17,120 @@
 .carousel{
     margin-bottom: 55px;
 }
+.left-sidebar {
+	padding-left: 0px;
+    padding-right: 10px;
+}
+.sidebar-nav {
+	background-color: #f9f9f9;
+    border: 1px solid #dcdcdc;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding-left: 0px;
+    padding-bottom: 5px;	
+}
+.sidebar-nav h4 {
+    border-bottom: 1px solid #dcdcdc;
+    padding: 10px 15px;
+    margin-top: 0px;
+    line-height: 1.5;
+}
+.sidebar-nav li {
+	margin-bottom: 6px;
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 2px;
+    font-size: 12px;
+}
+.sidebar-nav li a {
+	color: #555;
+}
+.sidebar-nav img {
+	width: 100%;
+}
+h4.panel-heading {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.footer {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    line-height: 1.8;
+    margin-top: 20px;
+    color: #555;
+    border: 1px solid transparent;
+    border-color: #e7e7e7;
+}
+.panel-info {
+    box-shadow: 5px 3px 10px #d9edf7;
+}
+
+.bread-crumb {
+    padding-left: 0px;
+}
+.bread-crumb li {
+    list-style: none;
+    display: inline-block;
+    color: #434343;
+    font-size: 12px;
+}
+.bread-crumb li a {
+    color: #434343;
+    margin-right: 5px; 
+}
+.map-wrap {
+    position: inherit;
+    color: #333;  
+    font: 12px "微软雅黑"; 
+}
+#mapTipContent {
+    width: 900px;
+    margin: 0 auto;
+    display: none;
+}
+#ChinaMap {
+    margin: 50px auto;
+}
+#stateTip {
+    position: absolute;
+    left: 100%;
+    text-align: left;
+    display: inline;
+}
+.mapTipText {
+    width: 280px;
+    height: 110px;
+    background-color: #ffffff;
+}
+.mapTipText .mapTipList {
+    float: left;
+    margin-left: 4px;
+}
+.mapTipText .mapTipList h2 {
+    text-align: left;
+    margin: 0px;
+}
+.mapTipText .mapTipList h2 a {
+    font-size: 24px;
+    color: #262626;
+    text-decoration:none;
+}
+.mapTipText .mapTipList h2 a:hover { 
+    color: #0085d2;
+}
+.mapTipText .mapTipList h2 a span {
+    font-size: 16px;
+    margin-left: 3px;
+}
+.plan {
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.plan>tbody>tr>td {
+    padding: 6px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+

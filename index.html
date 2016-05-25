@@ -20,12 +20,10 @@
 </head>
 <body>
 <nav class="navbar navbar-default">
-    <div class="container-fluid">
+    <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-                <img alt="Brand" src="...">
-            </a>
+            <a class="navbar-brand" href="#">云南大学</a>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
@@ -38,14 +36,14 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">首页</a></li>
-                <li><a href="#">招生政策</a></li>
-                <li><a href="#">招生计划</a></li>
-                <li><a href="#">往年招生</a></li>
-                <li><a href="#">院系专业</a></li>
-                <li><a href="#">走进云大</a></li>
-                <li><a href="#">公示信息</a></li>
-                <li><a href="#">联系我们</a></li>
+                <li><a href="/">首页</a></li>
+                <li><a href="$cms.getUrl("招生政策")">招生政策</a></li>
+                <li><a href="$cms.getUrl("招生计划")">招生计划</a></li>
+                <li><a href="$cms.getUrl("往年招生")">往年招生</a></li>
+                <li><a href="$cms.getUrl("院系专业")">院系专业</a></li>
+                <li><a href="$cms.getUrl("走进云大")">走进云大</a></li>
+                <li><a href="$cms.getUrl("公示信息")">公示信息</a></li>
+                <li><a href="$cms.getUrl("联系我们")">联系我们</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -54,85 +52,34 @@
 </nav>
 <div class="container">
     <div class="row">
-        <div class="col-lg-2">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h4>left col</h4>
-
-                    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h4>left col</h4>
-
-                    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h4>left col</h4>
-
-                    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-                </div>
-            </div>
-
+        <div class="col-lg-2 col-md-2 left-sidebar visible-md visible-lg">
+            <ul class="sidebar-nav nav nav-stacked">
+                 <h4 class="">报名系统</h4>
+                 <li><a href="">云南大学2016年高校专项计划招生网上报名系统</a></li>
+                 <li><a href="">云南大学2016年高校专项计划招生网上报名系统</a></li>
+            </ul>
+            <ul class="sidebar-nav nav nav-stacked">
+                <h4 class="">导航</h4>
+                <li><a href="/">首页</a></li>
+                <li><a href="$cms.getUrl("招生政策")">招生政策</a></li>
+                <li><a href="$cms.getUrl("招生计划")">招生计划</a></li>
+                <li><a href="$cms.getUrl("往年招生")">往年招生</a></li>
+                <li><a href="$cms.getUrl("院系专业")">院系专业</a></li>
+                <li><a href="$cms.getUrl("走进云大")">走进云大</a></li>
+                <li><a href="$cms.getUrl("公示信息")">公示信息</a></li>
+                <li><a href="$cms.getUrl("联系我们")">联系我们</a></li>
+            </ul>
+            <ul class="sidebar-nav nav nav-stacked">
+                 <h4 class="">友情链接</h4>
+                 <li><a href="">云南大学</a></li>
+                 <li><a href="">教务处</a></li>
+                 <li><a href="">现代教育技术中心</a></li>
+            </ul>
         </div>
 
-        <div class="col-lg-5">
+        <div class="col-lg-10 col-md-10">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-info">
-                        <div class="panel-heading">最新发布</div>
-                        <div class="panel-body">
-                            <div class="list-group">
-                                <a href="#" class="list-group-item">Cras justo odio</a>
-                                <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-                                <a href="#" class="list-group-item">Morbi leo risus</a>
-                                <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-                                <a href="#" class="list-group-item">Vestibulum at eros</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-info">
-                        <div class="panel-heading">招生政策</div>
-                        <div class="panel-body">
-                            <div class="list-group">
-                                <a href="#" class="list-group-item">Cras justo odio</a>
-                                <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-                                <a href="#" class="list-group-item">Morbi leo risus</a>
-                                <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-                                <a href="#" class="list-group-item">Vestibulum at eros</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-info">
-                        <div class="panel-heading">往年招生</div>
-                        <div class="panel-body">
-                            <div class="list-group">
-                                <a href="#" class="list-group-item">Cras justo odio</a>
-                                <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-                                <a href="#" class="list-group-item">Morbi leo risus</a>
-                                <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-                                <a href="#" class="list-group-item">Vestibulum at eros</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-5">
-            <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-6 col-md-6 col-lg-push-6">
                     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
@@ -185,34 +132,81 @@
                         </a>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-6 col-md-6 col-lg-pull-6">
                     <div class="panel panel-info">
-                        <div class="panel-heading">公示信息</div>
+                        <h4 class="panel-heading">最新发布</h4>
                         <div class="panel-body">
                             <div class="list-group">
+                                <!--
                                 <a href="#" class="list-group-item">Cras justo odio</a>
-                                <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-                                <a href="#" class="list-group-item">Morbi leo risus</a>
-                                <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-                                <a href="#" class="list-group-item">Vestibulum at eros</a>
+                                -->
+                                #foreach($article in $cms.getContents("最新发布",5))
+                                <a href="$cms.getUrl($article)" class="list-group-item" title="$article.name"><span>#summary($article.name 24)</span> [$cms.format($article.publishDate,"MM/dd")]</a>
+                                #end
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-6 col-md-6">
                     <div class="panel panel-info">
-                        <div class="panel-heading">走进云大</div>
+                        <h4 class="panel-heading">招生政策</h4>
                         <div class="panel-body">
                             <div class="list-group">
+                                <!--
                                 <a href="#" class="list-group-item">Cras justo odio</a>
-                                <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-                                <a href="#" class="list-group-item">Morbi leo risus</a>
-                                <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-                                <a href="#" class="list-group-item">Vestibulum at eros</a>
+                                -->
+                                #foreach($article in $cms.getContents("招生政策",5))
+                                <a href="$cms.getUrl($article)" class="list-group-item" title="$article.name"><span>#summary($article.name 24)</span> [$cms.format($article.publishDate,"MM/dd")]</a>
+                                #end
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="panel panel-info">
+                        <h4 class="panel-heading">公示信息</h4>
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <!--
+                                <a href="#" class="list-group-item">Cras justo odio</a>
+                                -->
+                                #foreach($article in $cms.getContents("公示信息",5))
+                                <a href="$cms.getUrl($article)" class="list-group-item" title="$article.name"><span>#summary($article.name 24)</span> [$cms.format($article.publishDate,"MM/dd")]</a>
+                                #end
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="panel panel-info">
+                        <h4 class="panel-heading">往年招生</h4>
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <!--
+                                <a href="#" class="list-group-item">Cras justo odio</a>
+                                -->
+                                #foreach($article in $cms.getContents("往年招生",5))
+                                <a href="$cms.getUrl($article)" class="list-group-item" title="$article.name"><span>#summary($article.name 24)</span> [$cms.format($article.publishDate,"MM/dd")]</a>
+                                #end
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="panel panel-info">
+                        <h4 class="panel-heading">走进云大</h4>
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <!--
+                                <a href="#" class="list-group-item">Cras justo odio</a>
+                                -->
+                                #foreach($article in $cms.getContents("走进云大",5))
+                                <a href="$cms.getUrl($article)" class="list-group-item" title="$article.name"><span>#summary($article.name 24)</span> [$cms.format($article.publishDate,"MM/dd")]</a>
+                                #end
                             </div>
                         </div>
                     </div>
@@ -221,17 +215,19 @@
         </div>
     </div>
 </div>
-<footer class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-        </div>
-    </div>
+<footer class="footer">
+    <address>
+        <strong>联系地址：云南省昆明市翠湖北路2号云南大学教务处招生办公室</strong><br>
+        邮政编码：650091<br>
+        <abbr title="Phone">电话: </abbr>0871-65033819
+    </address>
+    <span>本网站所有内容版权归云南大学招生办公室所有，未经书面允许，任何单位和个人不得转载。</span>
 </footer>
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="scripts/jquery-2.2.1.min.js"></script>
+<script src="js/jquery-2.2.1.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="scripts/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
