@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<div id="container" style="position: relative; width: 1200px; height: 800px;"></div>
+<script src="bower_components/d3/d3.js"></script>
+<script src="bower_components/topojson/topojson.js"></script>
+<script src="bower_components/datamaps/dist/datamaps.chn.js"></script>
+<script>
+  var map = new Datamap({element: document.getElementById('container'), scope: 'chn',
+    setProjection: function(element, options){
+      var projection = d3.geo.conicConformal()
+       .rotate([-120, 0])
+       .center([0, 38])
+       .parallels([29.5, 45.5])
+       .scale(element.offsetWidth)
+       .translate([element.offsetWidth / 2, element.offsetHeight / 2])
+       .precision(.1);
+       path = d3.geo.path().projection(projection);
+       return {path:path, projection:projection};
+    }
+  });
+
+</script>
+</body>
+</html>

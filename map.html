@@ -52,19 +52,28 @@
 </nav>
 <div class="container">
     <div class="row">
-        <div class="col-lg-2 left-sidebar">
-            <ul class="sidebar-nav">    
-                 <h4 class="">报名系统</h4>
-                 <li><a href="">云南大学2016年高校专项计划招生网上报名系统</a></li>
-                 <li><a href="">云南大学2016年高校专项计划招生网上报名系统</a></li>
-                 <li><a href="">云南大学2016年高校专项计划招生网上报名系统</a></li>
-                 <li><a href="">云南大学2016年高校专项计划招生网上报名系统</a></li>
+        <div class="col-lg-2 col-md-2 left-sidebar visible-md visible-lg">
+            <ul class="sidebar-nav nav nav-stacked">
+                <h4 class="">报名系统</h4>
+                <li><a href="">云南大学2016年高校专项计划招生网上报名系统</a></li>
+                <li><a href="">云南大学2016年高校专项计划招生网上报名系统</a></li>
             </ul>
-            <ul class="sidebar-nav">    
-                 <h4 class="">友情链接</h4>
-                 <li><a href="">云南大学</a></li>
-                 <li><a href="">教务处</a></li>
-                 <li><a href="">现代教育技术中心</a></li>
+            <ul class="sidebar-nav nav nav-stacked">
+                <h4 class="">导航</h4>
+                <li><a href="/">首页</a></li>
+                <li><a href="$cms.getUrl("招生政策")">招生政策</a></li>
+                <li><a href="$cms.getUrl("招生计划")">招生计划</a></li>
+                <li><a href="$cms.getUrl("往年招生")">往年招生</a></li>
+                <li><a href="$cms.getUrl("院系专业")">院系专业</a></li>
+                <li><a href="$cms.getUrl("走进云大")">走进云大</a></li>
+                <li><a href="$cms.getUrl("公示信息")">公示信息</a></li>
+                <li><a href="$cms.getUrl("联系我们")">联系我们</a></li>
+            </ul>
+            <ul class="sidebar-nav nav nav-stacked">
+                <h4 class="">友情链接</h4>
+                <li><a href="">云南大学</a></li>
+                <li><a href="">教务处</a></li>
+                <li><a href="">现代教育技术中心</a></li>
             </ul>
             <ul class="sidebar-nav">
                 <h4 class="">云南大学本科招生办公室官方微信号</h4>
@@ -72,69 +81,45 @@
             </ul>
         </div>
 
-        <div class="col-lg-10 map-wrap">
+        <div class="col-lg-10 col-md-10">
             <ul class="bread-crumb">
                 <li><a href="#">首页</a>>></li>
                 <li>招生计划</li>
             </ul>
+
             <div class="panel panel-info">
                 <div class="panel-body">
+                    <p class="lead">全国概要信息</p>
                     <div class="itemCon">
                         <div id="ChinaMap" ></div>
                         <div id="stateTip" ></div>
                     </div>
-                    <div id="mapTipContent" >
-                        <div class="mapTipText mapTipText0">
-                            <div class="mapTipList">
-                                <h2><a href="">黑龙江<span>Heilongjiang</span></a></h2>
-                                <table class="table plan">
-                                    <tbody>
-                                        <tr>
-                                            <td>计划总数</td>
-                                            <td>文史</td>
-                                            <td>理工</td>
-                                            <td>艺术(文)</td>
-                                            <td>艺术(理)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2010</td>
-                                            <td>677</td>
-                                            <td>1173</td>
-                                            <td>115</td>
-                                            <td>0</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                            </div>
-                        </div>
-                        <div class="mapTipText mapTipText1">
-                            <div class="mapTipList">
-                                <h2><a href="">吉林<span>Jilin</span></a></h2>
-                                <table class="table plan">
-                                    <tbody>
-                                        <tr>
-                                            <td>计划总数</td>
-                                            <td>文史</td>
-                                            <td>理工</td>
-                                            <td>艺术(文)</td>
-                                            <td>艺术(理)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2010</td>
-                                            <td>677</td>
-                                            <td>1173</td>
-                                            <td>115</td>
-                                            <td>0</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
+                    <div id="mapTipContent">
                     </div>
-
                  </div>
+            </div>
+            <div class="panel panel-info">
+                <div class="panel-body">
+                    <p class="lead">招生信息查询</p>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="province" class="col-sm-2 control-label">选择省份</label>
+                            <div class="col-sm-10">
+                                <select id="province" name="province" class="form-control">
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr><th>专业名称/专业类别/专业代码</th><th>招生计划人数</th></tr>
+                            </thead>
+                            <tbody id="table_data_body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -151,20 +136,202 @@
     </div>
 </footer>
 
+<div style="display: none" id="template">
+    <div class="mapTipText">
+        <div class="mapTipList">
+            <h3><span class="tip_name"></span></h3>
+            <table class="table plan">
+                <tbody>
+                <tr>
+                    <td>计划总数</td>
+                    <td>文史</td>
+                    <td>理工</td>
+                    <td>艺术(文)</td>
+                    <td>艺术(理)</td>
+                    <td>体育类</td>
+                </tr>
+                <tr>
+                    <td><span class="tip_total"></span></td>
+                    <td><span class="tip_wenshi"></span></td>
+                    <td><span class="tip_ligong"></span></td>
+                    <td><span class="tip_yishuwen"></span></td>
+                    <td><span class="tip_yishuli"></span></td>
+                    <td><span class="tip_tiyulei"></span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
 <script src="js/jquery-2.2.1.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/raphael-min.js"></script>
-<script type="text/javascript" src="js/chinaMapConfig.js"></script>
-<script type="text/javascript" src="js/map-min.js"></script>
+<script src="js/sprintf.min.js"></script>
+<script src="js/raphael-min.js"></script>
+<script src="js/chinaMapConfig.js"></script>
+<script src="js/map-min.js"></script>
 <script type="text/javascript">
     $(function(){
-        $('#ChinaMap').SVGMap({
-            mapWidth: 806,
-            mapHeight: 396
+        var $province = $("select[name='province']");
+        $province.empty();
+        var meta_info, column_length, data;
+        var header = [];
+
+        // category index with "文史 理工 艺术(文) 艺术(理) 体育类"
+        var category_indexes = [[],[],[],[],[]];
+        var summary_data = [];
+
+        var $table_body = $("#table_data_body");
+        $.getJSON( "data.json", function( all_in_one_data ) {
+            meta_info = all_in_one_data.meta_info;
+            column_length = meta_info.major_id.length;
+            data = all_in_one_data.data;
+
+            // find category indexes
+            $(meta_info.major_category).each(function (i, v) {
+                if (v == "文史") {
+                    category_indexes[0].push(i);
+                }
+                else if (v == "理工") {
+                    category_indexes[1].push(i);
+                }
+                else if (v == "艺术(文)") {
+                    category_indexes[2].push(i);
+                }
+                else if (v == "艺术(理)") {
+                    category_indexes[3].push(i);
+                }
+                else if (v == "体育类") {
+                    category_indexes[4].push(i);
+                }
+            });
+
+            // dynamic generate options of select
+            $(data).each(function (i, v) {
+                $province.append($("<option>", {value: v.province_pinyin, html: v.province}));
+            });
+
+            // calculate the summary data
+            $(data).each(function (i, v) {
+                var relevant_summary_data = [0, 0, 0, 0, 0, 0];
+                $(v.data).each(function (index, count) {
+                    relevant_summary_data[0] += count;
+                    if (category_indexes[0].indexOf(index) != -1) {
+                        relevant_summary_data[1] += count;
+                    }
+                    else if (category_indexes[1].indexOf(index) != -1) {
+                        relevant_summary_data[2] += count;
+                    }
+                    else if (category_indexes[2].indexOf(index) != -1) {
+                        relevant_summary_data[3] += count;
+                    }
+                    else if (category_indexes[3].indexOf(index) != -1) {
+                        relevant_summary_data[4] += count;
+                    }
+                    else if (category_indexes[4].indexOf(index) != -1) {
+                        relevant_summary_data[5] += count;
+                    }
+                });
+                summary_data.push({province: v.province, province_pinyin: v.province_pinyin, relevant_summary_data: relevant_summary_data});
+            });
+
+            // cache the first column of the table
+            for(var i = 0; i < column_length; i++) {
+                header.push(sprintf("%1$s/%2$s/%3$s", meta_info.major_name[i], meta_info.major_category[i], meta_info.major_id[i]));
+            }
         });
+
+        $province.change(function() {
+            var select_value = $("select option:selected").val();
+            var relevant_data;
+            for(var i = 0; i < data.length; i ++) {
+                if(data[i].province_pinyin == select_value) {
+                    relevant_data = data[i].data;
+                }
+            }
+            $table_body.empty();
+            if(relevant_data) {
+                for(var i = 0; i < column_length; i++) {
+                    $table_body.append(sprintf("<tr><td>%1$s</td><td>%2$s</td></tr>", header[i], relevant_data[i] ? relevant_data[i] : "-"));
+                }
+            }
+        });
+
+        // operation after initialization
+        setTimeout(function() {
+            $province.val("yunnan");
+            $province.change();
+
+            var $mapTipContent = $("#mapTipContent");
+            var $mapTipContentTemplate = $("div.mapTipText", $("#template"));
+            $mapTipContent.empty();
+            var province_id_map = {
+                "heilongjiang":0,
+                "jilin":1,
+                "liaoning":2,
+                "hebei":3,
+                "shandong":4,
+                "jiangsu":5,
+                "zhejiang":6,
+                "anhui":7,
+                "henan":8,
+                "shanxi":9,
+                "shaanxi":10,
+                "gansu":11,
+                "hubei":12,
+                "jiangxi":13,
+                "fujian":14,
+                "hunan":15,
+                "guizhou":16,
+                "sichuan":17,
+                "yunnan":18,
+                "qinghai":19,
+                "hainan":20,
+                "shanghai":21,
+                "chongqing":22,
+                "tianjin":23,
+                "beijing":24,
+                "ningxia":25,
+                "neimenggu":26,
+                "guangxi":27,
+                "xinjiang":28,
+                "xizang":29,
+                "guangdong":30,
+                "xianggang":31,
+                "taiwan":32,
+                "aomen":33
+            };
+            $(summary_data).each(function(i, value) {
+                var id = province_id_map[value.province_pinyin];
+                var $mapTip = $mapTipContentTemplate.clone();
+                $mapTip.addClass("mapTipText" + id);
+                $(".tip_name", $mapTip).text(value.province);
+                $(".tip_total", $mapTip).text(value.relevant_summary_data[0]);
+                $(".tip_wenshi", $mapTip).text(value.relevant_summary_data[1]);
+                $(".tip_ligong", $mapTip).text(value.relevant_summary_data[2]);
+                $(".tip_yishuwen", $mapTip).text(value.relevant_summary_data[3]);
+                $(".tip_yishuli", $mapTip).text(value.relevant_summary_data[4]);
+                $(".tip_tiyulei", $mapTip).text(value.relevant_summary_data[5]);
+                $mapTipContent.append($mapTip);
+            }) ;
+
+            initMap($("#ChinaMap").parent().width(), $("#ChinaMap").parent().width() * 0.75);
+
+        }, 0);
+
+
+        function initMap(width, height) {
+            $('#ChinaMap').SVGMap({
+                mapWidth: width ? width : $("#ChinaMap").parent().width(),
+                mapHeight: height ? height : $("#ChinaMap").parent().height()
+            });
+        }
+
+        $(window).resize(function() {
+            initMap();
+        });
+
     });
 </script>
 </body>

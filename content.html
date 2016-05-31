@@ -88,9 +88,11 @@
                 <div class="panel-body">
                     <div>
                         <p class="text-center lead">$curArticle.name</p>
-                        <span class="date">发布时间: <strong>$cms.format($curArticle.publishDate,"yyyy-MM-dd")</strong></span>
-                        <span class="origin">来源: $curArticle.source</span>
-                        <span class="author">作者: $curArticle.author</span>
+                        <div class="well well-sm">
+                            <span class="date">发布时间: <strong>$cms.format($curArticle.publishDate,"yyyy-MM-dd")</strong></span>
+                            <span class="origin">来源: $curArticle.source</span>
+                            <span class="author">作者: $curArticle.author</span>
+                        </div>
                         <div class="content">
                             $curArticle.content
                         </div>

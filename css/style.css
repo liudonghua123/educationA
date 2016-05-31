@@ -134,3 +134,13 @@ h4.panel-heading {
     text-align: center;
 }
 
+.sidebar-nav li>a {
+    padding: 3px 15px;
+}
+.sidebar-nav li {
+    margin-bottom: 0px;
+}
+
+.mapTipList {
+    background-color: white;
+}
